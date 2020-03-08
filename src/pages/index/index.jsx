@@ -3,6 +3,7 @@ import { View, Text, Input, Button, Checkbox, Icon } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 
 import { add, checked, del } from '../../actions/todo'
+import Clock from '../../components/clock/index'
 
 import './index.less'
 
@@ -85,6 +86,7 @@ class Index extends Component {
     const {todoList} = this.props
     return (
       <View className='index'>
+        <Clock />
         <Input placeholder='填写新的TODO' className='input' type='text' value={inputVal} onInput={this.inputHandler.bind(this)} />
         <Button size='mini' className='add pull-right' onClick={this.addItem.bind(this)}>添加</Button>
         <Text className='mini-title'>Todo List</Text>
