@@ -2,7 +2,10 @@ import { ADD_TODO, CHECK_TODO, DEL_TODO } from '../constants/todo'
 
 const INITIAL_STATE = {
   todoList: [
-    {text: '学习小程序框架', checked: true}
+    {text: '学习小程序框架', checked: true},
+    {text: '写一个demo', checked: true},
+    {text: '封装一个组件demo', checked: true},
+    {text: '看Taro官方文档', checked: false},
   ]
 }
 
