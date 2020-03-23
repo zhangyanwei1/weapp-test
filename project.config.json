@@ -2,7 +2,7 @@
 	"miniprogramRoot": "dist/",
 	"projectname": "weapp-test",
 	"description": "小程序测试",
-	"appid": "touristappid",
+	"appid": "wx43e15a48ecf15f18",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,

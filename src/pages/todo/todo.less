@@ -1,0 +1,39 @@
+.input{
+  border: 1px solid #ddd;
+  height: 70px;
+  width: 540px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+  font-size: 32px;
+  border-radius: 4px;
+}
+.add{
+  vertical-align: middle;
+}
+.mini-title{
+  line-height: 40px;
+  font-weight: bold;
+  display: block;
+  margin-top: 20px;
+  font-size: 40px;
+}
+.list_wrap{
+  margin-top: 30px;;
+}
+.item-todo{
+  border-bottom: 1px dashed #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  .checkbox .wx-checkbox-input{
+    width: 36px;
+    height: 36px;
+    &.wx-checkbox-input-checked::before{
+      color: #ccc;
+    }
+  }
+  &.checked{
+    color: #999;
+    text-decoration: line-through;
+  }
+}
