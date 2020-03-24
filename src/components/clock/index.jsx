@@ -1,5 +1,6 @@
 import Taro, {Component} from '@tarojs/taro'
 import {View} from '@tarojs/components'
+import {formatDate} from '../../common/format_tool'
 import './index.less'
 
 class Clock extends Component {
@@ -29,7 +30,7 @@ class Clock extends Component {
   render() {
     const {date} = this.state;
     return (
-      <View className='clock-text'>{date.toLocaleTimeString()}</View>
+      <View className='clock-text'>{formatDate(date)}</View>
     )
   }
 }
