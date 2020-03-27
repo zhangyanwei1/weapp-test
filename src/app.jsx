@@ -21,6 +21,7 @@ class App extends Component {
     pages: [
       'pages/index/index',
       'pages/todo/todo',
+      'pages/product/product',
     ],
     window: {
       backgroundTextStyle: 'light', // 下拉loading样式
@@ -28,6 +29,22 @@ class App extends Component {
       navigationBarTitleText: 'WeChat', // 导航栏标题文字内容
       navigationBarTextStyle: 'black' // 导航栏标题颜色
     }
+  }
+
+  // 全局变量
+  globalData = {
+    navHeight: 0,
+    statusBarHeight: 20, // 手机状态栏高度
+  }
+
+  componentWillMount() {
+    const t = this;
+    Taro.getSystemInfo({
+      success(res) {
+        t.globalData.navHeight = 46 + res.statusBarHeight
+        t.globalData.statusBarHeight = res.statusBarHeight
+      }
+    })
   }
 
   componentDidMount () {}
