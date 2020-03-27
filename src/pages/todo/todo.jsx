@@ -32,7 +32,8 @@ class Todo extends Component {
   }
 
   config = {
-    navigationBarTitleText: 'todoList'
+    navigationBarTitleText: 'todoList',
+    navigationBarBackgroundColor: '#b5fc96', // 导航栏背景颜色
   }
 
   componentWillReceiveProps (nextProps) {

@@ -14,7 +14,6 @@ class Search extends Component {
           <Icon size='20' type='search' class='icon'></Icon>
         </View>
       </View>
-      
     )
   }
 }
