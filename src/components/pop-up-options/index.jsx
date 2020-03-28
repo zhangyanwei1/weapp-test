@@ -16,14 +16,20 @@ class popUpOptions extends Component {
   }
   handleOpen() {
     const {isShow} = this.state;
+    this.setState({
+      isShow: !isShow
+    })
     if (!isShow) {
       this.openAnimation();
     } else {
       this.backAnimation();
     }
+  }
+  handleClose() {
+    this.backAnimation();
     this.setState({
-      isShow: !isShow
-    })
+      isShow: false
+    });
   }
   openAnimation() {
     const options = {
@@ -69,17 +75,15 @@ class popUpOptions extends Component {
     const {isShow, animationItem1, animationItem2, animationItem3, animationItem4} = this.state;
     return(
       <View>
-        {isShow ? <View className='drawer_screen'></View> : null}
-        <View className='content'>
-          <View onClick={this.handleOpen.bind(this)} className='button'>
-            <View className='one'>点 击</View>
-            <View>弹 出</View>
-          </View>
-          <View animation={animationItem1} className='option-item'>选项1</View>
-          <View animation={animationItem2} className='option-item'>选项2</View>
-          <View animation={animationItem3} className='option-item'>选项3</View>
-          <View animation={animationItem4} className='option-item'>选项4</View>
+        {isShow ? <View className='drawer_screen' onClick={this.handleClose.bind(this)}></View> : null}
+        <View onClick={this.handleOpen.bind(this)} className='button'>
+          <View className='one'>点 击</View>
+          <View>弹 出</View>
         </View>
+        <View animation={animationItem1} className='option-item'>选项1</View>
+        <View animation={animationItem2} className='option-item'>选项2</View>
+        <View animation={animationItem3} className='option-item'>选项3</View>
+        <View animation={animationItem4} className='option-item'>选项4</View>
       </View>
     )
   }
