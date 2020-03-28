@@ -1,6 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Navigator, Text, OpenData } from '@tarojs/components'
 import './index.less'
+import popUpOptions from '../../components/pop-up-options/index'
 
 class Index extends Component {
   config = {
@@ -16,6 +17,7 @@ class Index extends Component {
   render () {
     return (
       <View className='container'>
+        <popUpOptions />
         <View className='text-center user-info'>  
           <OpenData className='avatar middle' type='userAvatarUrl'></OpenData>
           <OpenData className='m-l middle' type='userNickName'></OpenData>
