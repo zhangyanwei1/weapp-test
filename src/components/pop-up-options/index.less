@@ -9,10 +9,13 @@
   z-index: 1000;
   background: rgba(0, 0, 0, .5);
 }
-.button{
+.position{
   position: fixed;
   right: 40px;
   bottom: 200px;
+  z-index: 1001;
+}
+.button{
   width: 100px;
   height: 100px;
   background-color: orange;
@@ -21,15 +24,12 @@
   text-align: center;
   line-height: 36px;
   color: #fff;
-  z-index: 10001;
+  z-index: 1002;
   .one{
     margin-top: 12px;
   }
 }
 .option-item{
-  position: fixed;
-  right: 40px;
-  bottom: 200px;
   width: 100px;
   height: 100px;
   line-height: 100px;
@@ -37,6 +37,23 @@
   border-radius: 50%;
   font-size: 26px;
   text-align: center;
-  z-index: 1001;
   opacity: 0;
+  transform: translate(0, 0);
+  transition: all .2s ease-out;
+}
+.item1{
+  transform: translate(0, -180px);
+  opacity: 1;
+}
+.item2{
+  transform: translate(-160px, -120px);
+  opacity: 1;
+}
+.item3{
+  transform: translate(-200px, 20px);
+  opacity: 1;
+}
+.item4{
+  transform: translate(-140px, 140px);
+  opacity: 1;
 }
