@@ -2,6 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components'
 import './product.less'
 import NavSearch from '../../components/nav-search/index'
+import BackTop from '../../components/back-top/index'
 
 class Product extends Component {
   config = {
@@ -99,6 +100,7 @@ class Product extends Component {
     const {list, loadingBottom} = this.state;
     return (
       <View className='body'>
+        <BackTop />
         <NavSearch />
         <View 
           className='container'
