@@ -4,7 +4,7 @@ import './index.less'
 import backImg from '../../img/back.png'
 
 const app = Taro.getApp();
-class navBack extends Component {
+class NavBack extends Component {
   constructor(props) {
     super (props)
     this.state = {
@@ -27,10 +27,10 @@ class navBack extends Component {
         style={{top: statusBarHeight + 5 + 'px'}}
         hoverClass='none'
       >
-          <Image mode='aspectFit' class='back-img' src={backImg} />
-        </Navigator>
+        <Image mode='aspectFit' class='back-img' src={backImg} />
+      </Navigator>
     )
   }
 }
 
-export default navBack
+export default NavBack
