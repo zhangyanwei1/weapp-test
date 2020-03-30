@@ -27,10 +27,13 @@ class NavSearch extends Component {
   render() {
     const {navHeight, statusBarHeight} = this.state;
     return (
-      <View className='nav-wrap' style={{height: navHeight + 'px'}}>
-        <View style={{height: statusBarHeight + 5 + 'px'}}></View>
-        <NavBack></NavBack>
-        <Search></Search>
+      <View>
+        <View className='nav-wrap' style={{height: navHeight + 'px'}}>
+          <View style={{height: statusBarHeight + 5 + 'px'}}></View>
+          <NavBack></NavBack>
+          <Search></Search>
+        </View>
+        <View style={{height: navHeight + 'px'}}></View>
       </View>
     )
   }
