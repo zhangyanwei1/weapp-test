@@ -30,6 +30,10 @@ class Index extends Component {
           <Text className='seq'>2</Text>
           商品列表
         </Navigator>
+        <Navigator hoverClass='none' className='index-link' url='/pages/upload/upload'>
+          <Text className='seq'>3</Text>
+          图片上传预览
+        </Navigator>
       </View>
     )
   }

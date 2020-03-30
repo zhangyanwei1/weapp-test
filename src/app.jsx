@@ -22,6 +22,7 @@ class App extends Component {
       'pages/index/index',
       'pages/todo/todo',
       'pages/product/product',
+      'pages/upload/upload'
     ],
     window: {
       backgroundTextStyle: 'light', // 下拉loading样式
